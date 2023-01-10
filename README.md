@@ -45,18 +45,12 @@ modern.lua --> "\~\~/scripts/" (!!REMOVE OTHER OSC SCRIPTS!!)
 
 material-design-iconic-font.ttf --> "\~\~/fonts" ([FONT LINK](https://zavoloklom.github.io/material-design-iconic-font/))
 
-Then edit "\~\~/mpv.conf", add the following lines to the end
+Then edit "\~\~/mpv.conf", add the following configuration:
 
 ```
 osc=no
-
-[Idle]
-profile-cond=p["idle-active"]
-profile-restore=copy-equal
-title=' '
-keepaspect=no
-background=1
 ```
+
 # Configuration
 
 Config file locates at "\~\~/script-opts/osc.conf". Supported options are listed below.
@@ -79,13 +73,13 @@ seekbarkeyframes=yes/no         -- use keyframes when dragging the seekbar
 title='${media-title}'          -- string compatible with property-expansion to be shown as OSC title
 showtitle=yes/no                -- show title and no hide timeout on pause
 timetotal=yes/no                -- display total time instead of remaining time?
-timems=yes/no,                  -- display timecodes with milliseconds
+timems=yes/no                   -- display timecodes with milliseconds
 visibility=auto/yes/no          -- only used at init to set visibility_mode(...)
 windowcontrols=auto/yes/no      -- whether to show window controls
 volumecontrol=yes/no            -- whether to show mute button and volumne slider
 processvolume=yes/no            -- volume bar show processd volume
 language=eng/chs                -- eng=English chs=Chinese
-thumbpad = 4,                   -- thumbnail border size
+thumbpad=4                      -- thumbnail border size
 ```
 
 # Thumbnails
