@@ -1,6 +1,6 @@
 # mpv-osc-modern
 
-This is a fork of [maoiscat/mpv-osc-modern](https://github.com/maoiscat/mpv-osc-modern) that seems it won't be maintaned anymore.
+This is a fork of [maoiscat/mpv-osc-modern](https://github.com/maoiscat/mpv-osc-modern), that seems to not be maintained anymore.
 
 For simplicity I merged everything into the `main` branch, including thumbfast support (originally in `with.thumbfast`).
 
