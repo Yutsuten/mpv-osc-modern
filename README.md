@@ -1,13 +1,28 @@
 # mpv-osc-modern
+
+This is a fork of [maoiscat/mpv-osc-modern](https://github.com/maoiscat/mpv-osc-modern) that seems it won't be maintaned anymore.
+
+For simplicity I merged everything into the `main` branch, including thumbfast support (originally in `with.thumbfast`).
+
+I won't be dealing with issues but feel free to open MRs.
+
+VER 1.2.0
+
+changelog:
+1. Add `timems` option that allows displaying timecodes with milliseconds
+2. Add `thumbpad` option that allows customizing the thumbnail border size
+3. Merge [#27 Add a polish translation.](https://github.com/maoiscat/mpv-osc-modern/pull/27)
+4. Normalize whitespace (convert tab to spaces, remove trailing whitespace), convert line endings from `dos` to `unix`
+
 VER 1.1.2
 
 changelog:
-1. add thumbnails in timeline integration (when [thumbfast](https://github.com/po5/thumbfast) is installed).
+1. Add thumbnails in timeline integration (when [thumbfast](https://github.com/po5/thumbfast) is installed).
 
 VER 1.1.1
 
 changelog:
-1. fix logo distortion issue due to recent libass update.
+1. Fix logo distortion issue due to recent libass update.
 
 VER 1.1.0
 
@@ -47,28 +62,30 @@ background=1
 Config file locates at "\~\~/script-opts/osc.conf". Supported options are listed below.
 
 ```
-    showwindowed=yes/no             -- show OSC when windowed?
-    showfullscreen=yes/no           -- show OSC when fullscreen?
-    scalewindowed=1                 -- scaling of the controller when windowed
-    scalefullscreen=1               -- scaling of the controller when fullscreen
-    scaleforcedwindow=2             -- scaling when rendered on a forced window
-    vidscale=yes/no                 -- scale the controller with the video?
-    hidetimeout=1000                -- duration in ms until the OSC hides if no mouse movement. enforced non-negative for the user but internally negative is 'always-on'.
-    fadeduration=500                -- duration of fade out in ms 0=no fade
-    minmousemove=3                  -- minimum amount of pixels the mouse has to move between ticks to make the OSC show up
-    iamaprogrammer=yes/no           -- use native mpv values and disable OSC internal track list management (and some functions that depend on it)
-    font='mpv-osd-symbols'          -- default osc font
-    seekrange=yes/no                -- show seekrange overlay
-    seekrangealpha=128              -- transparency of seekranges
-    seekbarkeyframes=yes/no         -- use keyframes when dragging the seekbar
-    title='${media-title}'          -- string compatible with property-expansion to be shown as OSC title
-    showtitle=yes/no                -- show title and no hide timeout on pause
-    timetotal=yes/no                -- display total time instead of remaining time?
-    visibility=auto/yes/no          -- only used at init to set visibility_mode(...)
-    windowcontrols=auto/yes/no      -- whether to show window controls
-    volumecontrol=yes/no            -- whether to show mute button and volumne slider
-    processvolume=yes/no            -- volume bar show processd volume
-    language=eng/chs                -- eng=English chs=Chinese
+showwindowed=yes/no             -- show OSC when windowed?
+showfullscreen=yes/no           -- show OSC when fullscreen?
+scalewindowed=1                 -- scaling of the controller when windowed
+scalefullscreen=1               -- scaling of the controller when fullscreen
+scaleforcedwindow=2             -- scaling when rendered on a forced window
+vidscale=yes/no                 -- scale the controller with the video?
+hidetimeout=1000                -- duration in ms until the OSC hides if no mouse movement. enforced non-negative for the user but internally negative is 'always-on'.
+fadeduration=500                -- duration of fade out in ms 0=no fade
+minmousemove=3                  -- minimum amount of pixels the mouse has to move between ticks to make the OSC show up
+iamaprogrammer=yes/no           -- use native mpv values and disable OSC internal track list management (and some functions that depend on it)
+font='mpv-osd-symbols'          -- default osc font
+seekrange=yes/no                -- show seekrange overlay
+seekrangealpha=128              -- transparency of seekranges
+seekbarkeyframes=yes/no         -- use keyframes when dragging the seekbar
+title='${media-title}'          -- string compatible with property-expansion to be shown as OSC title
+showtitle=yes/no                -- show title and no hide timeout on pause
+timetotal=yes/no                -- display total time instead of remaining time?
+timems=yes/no,                  -- display timecodes with milliseconds
+visibility=auto/yes/no          -- only used at init to set visibility_mode(...)
+windowcontrols=auto/yes/no      -- whether to show window controls
+volumecontrol=yes/no            -- whether to show mute button and volumne slider
+processvolume=yes/no            -- volume bar show processd volume
+language=eng/chs                -- eng=English chs=Chinese
+thumbpad = 4,                   -- thumbnail border size
 ```
 
 # Thumbnails
